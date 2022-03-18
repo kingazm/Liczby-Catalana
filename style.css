@@ -10,6 +10,9 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  margin-left: 0;
+ margin-right: 0;
+
 }
 
 .top-bar {
@@ -34,7 +37,7 @@ body {
 .navigation ul {
   padding: 20px;
   padding-right: 30px;
-  text-align: right;
+  text-align: center;
 }
 
 
@@ -58,21 +61,20 @@ body {
   color: lime;
 }
 
-.main-content {
-  margin-left: 10px;
-  margin-right: 10px;
-}
+
 
 section {
   background-color: white;
-  height: 90vh;
+  height: 180vh;
   margin:0;
+
   padding:5.5rem 4rem;
 }
 
 section:first-of-type {
     padding: 0;
     margin: 0;
+    height: 90vh;
 }
 
 section:nth-of-type(2n) {
@@ -101,5 +103,23 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
+
+}
+
+#footer {
+  height: auto;
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom:0;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  float: left;
+  width: 100%;
+}
+
+#footer a {
+    color: lime;
 }
