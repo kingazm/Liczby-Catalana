@@ -12,7 +12,14 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.side-bar {
+.top-bar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+/*.side-bar {
   width: 160px;
   height: 100vh;
   position: fixed;
@@ -21,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 
 nav ul {
   padding: 0;
@@ -42,7 +50,7 @@ nav li a {
 nav li a:hover {
   color: lime;
 }
-
+*/
 .main-content {
   margin-left: 160px;
 }
@@ -70,4 +78,9 @@ h1 {
 .active {
   color: lime;
   font-weight: 600;
+}
+
+.side-bar {
+  overflow: hidden;
+
 }
