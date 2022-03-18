@@ -5,11 +5,86 @@
 <link rel="stylesheet" href="style.css">
 </HEAD>
 <BODY>
-<h1>tu powstanie projekt wielki :)</h1>
-<p>pomysły:
+<h1>liczby catalana</h1>
+<h3>tu powstanie projekt wielki :)</h3>
+<p>metoda na scrollowanie str zainspirowana z https://www.turnwall.com/articles/adding-single-page-scrolling-navigation-to-your-site/ </p>
+
+<div class="side-bar">
+  <nav class="navigation">
     <ul>
-        <li>hipoteza riemanna
-        <li>liczby catalana (kominatoryka!)
+      <li>
+        <a href="#theorie">teoria</a>
+        <a href="#properties">właściwości</a>
+        <a href="#usage">zastosowania</a>
+        <a href="#exercises">zadania</a>
+        <a href="#about">o stronie</a>
+      </li>
     </ul>
+  </nav>
+</div>
+<div class="main-content">
+  <section id="theorie">
+    <h1>teoria</h1>
+    <p>nagłówki graficzne</p>
+  </section>
+  <section id="properties">
+    <h1>właściwości</h1>
+  </section>
+  <section id="usage">
+    <h1>zastosowania</h1>
+  </section>
+  <section id="exercises">
+    <h1>zadania</h1>
+  </section>
+  <section id="about">
+    <h1>o stronie</h1>
+  </section>
+</div>
+
+<script>
+// Get all sections that have an ID defined
+const sections = document.querySelectorAll("section[id]");
+
+// Add an event listener listening for scroll
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter() {
+
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
+
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+
+    // Original:
+    // const sectionTop = current.offsetTop - 50;
+    //
+    // Alex Turnwall's update:
+    // Updated original line (above) to use getBoundingClientRect instead of offsetTop, based on:
+    // https://plainjs.com/javascript/styles/get-the-position-of-an-element-relative-to-the-document-24/
+    // https://newbedev.com/difference-between-getboundingclientrect-top-and-offsettop
+    // This allows the use of sections inside a relative parent, which I'm not using here, but needed for a project
+    //
+    const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
+    sectionId = current.getAttribute("id");
+
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ){
+      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active");
+    } else {
+      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active");
+    }
+  });
+}
+
+</sctipt>
+
 </BODY>
 </HTML>
