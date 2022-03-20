@@ -48,7 +48,7 @@ body {
 
 .navigation li a {
   text-decoration: none;
-  color: #333;
+  color: black;
   display: row;
   padding: 0.6rem 0.3rem;
   font-weight: 400;
@@ -58,10 +58,16 @@ body {
 }
 
 .navigation li a:hover {
-  color: lime;
+  color: #E8A87C;
 }
 
+.navigation li a:hover:nth-of-type(2n){
+    color: #C38D9E;
+}
 
+.navigation li a:hover:nth-of-type(3){
+    color: #D69A8C;
+}
 
 section {
   background-color: white;
