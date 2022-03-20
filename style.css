@@ -134,3 +134,8 @@ h1 {
 
     padding: 30px;
 }
+
+#footer a {
+    color: #D69A8C;
+    text-decoration: none;
+}
