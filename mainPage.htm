@@ -30,8 +30,7 @@
 
     <section id="intro">
         <div class="sectionText">
-            <!--<p>tu pojawi sie opis tej jakze interesujacej strony :)</p>
-        </div> -->
+        </div>
     </section>
   <section id="theorie">
       <img src="section.png" height=500px width=100% class="center">
@@ -58,13 +57,16 @@
         <h3>Przykładowe liczby Catalana</h3>
         <p>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, ...</p>
 
+        <h3>Program wyznaczajacy n-tą liczbę Catalana</h3>
+
+
+
         <p>//moze to jako ciekawostka ze spanem??</p>
         <p>Co ciekawe, liczby te można znaleźć po podzieleniu środkowych liczb w trójkącie Pascala przez kolejne liczby naturalne dodatnie. OBRAZEK DODAJ WŁASNY Z CANVY</p>
 
         <img src="pascal.png" height=600px width=1200px class="center">
 
-        <h3>Dowód wzoru jawnego</h3>
-        <p>TUTAJ http://liczbycatalana.blogspot.com</p>
+
 
         <!--metoda na scrollowanie str zainspirowana z https://www.turnwall.com/articles/adding-single-page-scrolling-navigation-to-your-site/ -->
     </div>
@@ -81,6 +83,9 @@
       <img src="section.png" height=500px width=100% class="center">
       <div class="sectionText">
           <h1>zastosowania</h1>
+          <p>tutaj te rozne zadania itd</p>
+          <h3>Dowód wzoru jawnego poniewaz mozna go wyprowadzic na podstawie zadania z drogami</h3>
+          <p>TUTAJ http://liczbycatalana.blogspot.com</p>
       </div>
   </section>
   <section id="exercises">
@@ -122,37 +127,20 @@
 
 
 <script>
-// Get all sections that have an ID defined
-const sections = document.querySelectorAll("section[id]");
 
-// Add an event listener listening for scroll
+const sections = document.querySelectorAll("section[id]");
 window.addEventListener("scroll", navHighlighter);
 
 function navHighlighter() {
 
-  // Get current scroll position
   let scrollY = window.pageYOffset;
 
-  // Now we loop through sections to get height, top and ID values for each
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
 
-    // Original:
-    // const sectionTop = current.offsetTop - 50;
-    //
-    // Alex Turnwall's update:
-    // Updated original line (above) to use getBoundingClientRect instead of offsetTop, based on:
-    // https://plainjs.com/javascript/styles/get-the-position-of-an-element-relative-to-the-document-24/
-    // https://newbedev.com/difference-between-getboundingclientrect-top-and-offsettop
-    // This allows the use of sections inside a relative parent, which I'm not using here, but needed for a project
-    //
     const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
     sectionId = current.getAttribute("id");
 
-    /*
-    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-    */
     if (
       scrollY > sectionTop &&
       scrollY <= sectionTop + sectionHeight
@@ -162,6 +150,10 @@ function navHighlighter() {
       document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active");
     }
   });
+}
+
+function catalan() {
+
 }
 
 
