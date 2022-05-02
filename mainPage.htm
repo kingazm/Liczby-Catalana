@@ -28,13 +28,8 @@
 <div id="main-content">
     <section id="start">
         <a href="#theorie">
-            <img src="logo.png" height=600px width=1200px class="center">
+            <img src="logo.png" height=100% width=100% class="center">
         </a>
-    </section>
-
-    <section id="intro">
-        <div class="sectionText">
-        </div>
     </section>
 
     <section id="theorie">
@@ -46,17 +41,36 @@
             <p>Nazywa się je również liczbami Segnera na cześć matematyka Jána Andreja Segnera.</p>
 
             <h1>Jak wyznaczyć kolejne liczby Catalana?</h1>
+            <h3>Sposób 1: wzór jawny</h3>
             <p>Tak jak w przypadku innych ciągów, n-tą liczbę Catalana można wyznaczyć jako n-ty wyraz ciągu określonego wzorem jawnym</p>
             $${\displaystyle c_{n}={\frac {1}{n+1}}{2n \choose n}={\frac {(2n)!}{(n+1)!\,n!}}\qquad {\mbox{ dla }}n\geqslant 1}$$
 
-            <p>Wzór rekurencyjny można prosto wyprowadzić w poniższy sposób</p>
+            <h3>Sposób 2: wzór rekurencyjny</h3>
+            <p>Znając wzór jawny, wzór rekurencyjny można prosto wyprowadzić w poniższy sposób</p>
+
+            $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {\frac{(2(n+1))!}{(n+1+1)!(n+1)!}}{\frac{(2n)!}{(n+1)!n!}}}\qquad }$$
+            $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {(2(n+1))!}{(n+2)!(n+1)!}}  \cdot  {\frac{(n+1)!n!}{(2n)!}}\qquad }$$
+            $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {(2n+2))!}{(n+2)!(n+1)!}}  \cdot  {\frac{(n+1)!n!}{(2n)!}}\qquad }$$
+            $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {(2n+2)!}{(n+2)(n+1) n!}} \cdot {\frac {n!}{(2n)!}}\qquad }$$
+            $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {(2n+2)!}{(n+2) (n+1)}} \cdot {\frac {1}{(2n)!}}\qquad }$$
+            $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {(2n+2) (2n+1) (2n)!}{(n+2) (n+1)}} \cdot {\frac {1}{(2n)!}}\qquad }$$
+            $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {(2n+2) (2n+1)}{(n+2) (n+1)}} \cdot {\frac {1}{1}}\qquad }$$
+            $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {2(n+1) (2n+1)}{(n+2) (n+1)}} \qquad }$$
+
+
             $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {2(2n+1)}{n+2}}\qquad }$$
-            $${\displaystyle c_{n+1}={\frac {2(2n+1)}{n+2}} c_{n} \qquad {\mbox{ dla }}n\geqslant 1}$$
+
+            $${\displaystyle c_{n+1}={\frac {2(2n+1)}{n+2}} c_{n} \qquad }$$
+
+            <p>Końcowo otrzymujemy</p>
+
+            $${\displaystyle  c_{n}=1 \qquad {\mbox{ dla }}n = 1}$$
+            $${\displaystyle c_{n+1}={\frac {2(2n+1)}{n+2}} c_{n} \qquad {\mbox{ dla }}n > 1}$$
 
             <h2>Kolejne liczby Catalana dla n ≥ 1</h2>
             <p>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, ...</p>
 
-            <p>Co ciekawe, liczby te można znaleźć po podzieleniu środkowych liczb w trójkącie Pascala przez kolejne liczby naturalne dodatnie. </p>
+            <p>Co ciekawe, liczby te można znaleźć po podzieleniu środkowych liczb w trójkącie Pascala przez kolejne liczby całkowite dodatnie </p>
             <img src="pascal.png" height=350px width=650px class="center">
 
             <h2 style="margin-bottom: 1%">Program wyznaczajacy n-tą liczbę Catalana</h2>
