@@ -20,7 +20,7 @@ function catalan()
   var n = document.getElementById("n").value;
   n = parseFloat(n);
 
-  if(n < 1 || Number.isInteger(n)===false)
+  if(n < 0 || Number.isInteger(n)===false)
     document.getElementById("result").innerHTML = "niepoprawne n. podaj liczbę całkowitą większą od 0";
 
   else
