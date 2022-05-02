@@ -72,7 +72,6 @@ section:first-of-type {
 
 }
 
-
 h1 {
   font-weight: 600;
 }
@@ -146,4 +145,16 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #C38D9E;
     color: white;
+}
+
+ul
+{
+    list-style: none;
+
+}
+
+ul li:before {
+    content: "\25AA";
+    color: #C38D9E;
+    padding: 6px;
 }
