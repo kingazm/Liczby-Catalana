@@ -27,7 +27,7 @@
 
 <div id="main-content">
     <section id="start">
-        <a href="#intro">
+        <a href="#theorie">
             <img src="logo.png" height=600px width=1200px class="center">
         </a>
     </section>
@@ -40,33 +40,33 @@
     <section id="theorie">
         <img src="section.png" height=500px width=100% class="center">
         <div class="sectionText">
-            <h2>Czym są liczby Catalana?</h2>
+            <h1>Czym są liczby Catalana?</h1>
             <p>To szczególny ciąg liczbowy nazwany na cześć pochodzącego z Belgii matematyka Eugène Charlesa Catalana. </p>
             <p>Natomiast po raz pierwszy wprowadzone zostały w XVIII wieku przez Leonarda Eulera na potrzeby badania liczby podziałów wielokątów na trójkąty.</p>
             <p>Nazywa się je również liczbami Segnera na cześć matematyka Jána Andreja Segnera.</p>
 
-            <h2>Jak wyznaczyć kolejne liczby Catalana?</h2>
-            <p>Tak jak w przypadku innych ciągów, n-tą liczbę Catalana można wyznaczyć jako n-ty wyraz ciągu określonego wzorem jawnym:</p>
+            <h1>Jak wyznaczyć kolejne liczby Catalana?</h1>
+            <p>Tak jak w przypadku innych ciągów, n-tą liczbę Catalana można wyznaczyć jako n-ty wyraz ciągu określonego wzorem jawnym</p>
             $${\displaystyle c_{n}={\frac {1}{n+1}}{2n \choose n}={\frac {(2n)!}{(n+1)!\,n!}}\qquad {\mbox{ dla }}n\geqslant 1}$$
 
             <p>Wzór rekurencyjny można prosto wyprowadzić w poniższy sposób</p>
             $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {2(2n+1)}{n+2}}\qquad }$$
             $${\displaystyle c_{n+1}={\frac {2(2n+1)}{n+2}} c_{n} \qquad {\mbox{ dla }}n\geqslant 1}$$
 
-            <h3>Kolejne liczby Catalana dla n>= 1</h3>
+            <h2>Kolejne liczby Catalana dla n ≥ 1</h2>
             <p>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, ...</p>
 
             <p>Co ciekawe, liczby te można znaleźć po podzieleniu środkowych liczb w trójkącie Pascala przez kolejne liczby naturalne dodatnie. </p>
             <img src="pascal.png" height=350px width=650px class="center">
 
-            <h3>Program wyznaczajacy n-tą liczbę Catalana</h3>
+            <h2 style="margin-bottom: 1%">Program wyznaczajacy n-tą liczbę Catalana</h2>
             <table>
                 <tr>
-                    <td><input type="text" id="n"></td>
-                    <td><div id="result"></div></td>
+                    <td><input type="text" placeholder ="podaj n..." id="n"></td>
+                    <td><input type="submit" value="oblicz" onclick="catalan()"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="oblicz" onclick="catalan()"></td>
+                    <td><div id="result"></div></td>
                 </tr>
             </table>
         </div>

@@ -25,7 +25,7 @@ function catalan()
 
   else
     {
-    document.getElementById("result").innerHTML = catalanNumber(n);
+    document.getElementById("result").innerHTML = n + ". liczba Catalana to " + catalanNumber(n);
 
     }
 
