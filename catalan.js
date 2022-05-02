@@ -1,7 +1,17 @@
-function catalanNumber()
+function catalanNumber(index)
 {
     //catalan number obliczanie wlasxiwe
-    return 4;
+
+    if(index === 1)
+    {
+        return 1;
+    }
+
+    else
+    {
+        var h = index - 1; //zmienna pomocnicza
+        return catalanNumber(index-1) * (4*h + 2)/(h+2);
+    }
 }
 
 

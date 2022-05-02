@@ -48,16 +48,16 @@
         <h2>Jak wyznaczyć kolejne liczby Catalana?</h2>
         <p>Tak jak w przypadku innych ciągów, n-tą liczbę Catalana można wyznaczyć jako n-ty wyraz ciągu określonego wzorem jawnym:</p>
 
-        $${\displaystyle c_{n}={\frac {1}{n+1}}{2n \choose n}={\frac {(2n)!}{(n+1)!\,n!}}\qquad {\mbox{ dla }}n\geqslant 0}$$
+        $${\displaystyle c_{n}={\frac {1}{n+1}}{2n \choose n}={\frac {(2n)!}{(n+1)!\,n!}}\qquad {\mbox{ dla }}n\geqslant 1}$$
 
         <p>Wzór rekurencyjny można prosto wyprowadzić w poniższy sposób</p>
         $${\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {2(2n+1)}{n+2}}\qquad }$$
-        $${\displaystyle c_{n+1}={\frac {2(2n+1)}{n+2}} c_{n} \qquad }$$
+        $${\displaystyle c_{n+1}={\frac {2(2n+1)}{n+2}} c_{n} \qquad {\mbox{ dla }}n\geqslant 1}$$
 
 + ten koncowy! i spr czy poprawnie ofc + podlinkować
 //span kolory jakies wyroznione slowa?
 
-        <h3>Przykładowe liczby Catalana</h3>
+        <h3>Kolejne liczby Catalana dla n>= 1</h3> 
         <p>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, ...</p>
 
         <p>//moze to jako ciekawostka ze spanem??</p>
@@ -68,8 +68,6 @@
 
 
         <!--metoda na scrollowanie str zainspirowana z https://www.turnwall.com/articles/adding-single-page-scrolling-navigation-to-your-site/ -->
-    </div>
-  </section>
 
 
   <h3>Program wyznaczajacy n-tą liczbę Catalana</h3>
@@ -85,6 +83,8 @@
       </table>
 
 
+  </div>
+  </section>
 
 
   <section id="properties">
