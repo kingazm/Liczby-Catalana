@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="catalan.js"></script>
+<script src="scrollMechanism"></script>
 </HEAD>
 <BODY>
 
@@ -23,7 +25,7 @@
 </div>
 </div>
 <div id="main-content">
-    <section id="start">
+    <section id="start2">
         <a href="#intro">
         <img src="logo.png" height=600px width=1200px class="center">
 </a>
@@ -58,10 +60,6 @@
         <h3>Przykładowe liczby Catalana</h3>
         <p>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, ...</p>
 
-        <h3>Program wyznaczajacy n-tą liczbę Catalana</h3>
-
-
-
         <p>//moze to jako ciekawostka ze spanem??</p>
         <p>Co ciekawe, liczby te można znaleźć po podzieleniu środkowych liczb w trójkącie Pascala przez kolejne liczby naturalne dodatnie. OBRAZEK DODAJ WŁASNY Z CANVY</p>
 
@@ -72,6 +70,23 @@
         <!--metoda na scrollowanie str zainspirowana z https://www.turnwall.com/articles/adding-single-page-scrolling-navigation-to-your-site/ -->
     </div>
   </section>
+
+
+  <h3>Program wyznaczajacy n-tą liczbę Catalana</h3>
+
+  <table>
+          <tr>
+              <td><input type="text" id="n"></td>
+              <td><div id="result"></div></td>
+          </tr>
+          <tr>
+              <td><input type="submit" value="oblicz" onclick="catalan()"></td>
+          </tr>
+      </table>
+
+
+
+
   <section id="properties">
       <img src="section.png" height=500px width=100% class="center">
       <div class="sectionText">
@@ -129,33 +144,6 @@
 
 <script>
 
-const sections = document.querySelectorAll("section[id]");
-window.addEventListener("scroll", navHighlighter);
-
-function navHighlighter() {
-
-  let scrollY = window.pageYOffset;
-
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight;
-
-    const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
-    sectionId = current.getAttribute("id");
-
-    if (
-      scrollY > sectionTop &&
-      scrollY <= sectionTop + sectionHeight
-    ){
-      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active");
-    } else {
-      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active");
-    }
-  });
-}
-
-function catalan() {
-
-}
 
 
 </sctipt>
