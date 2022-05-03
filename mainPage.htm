@@ -31,10 +31,9 @@ $(document).ready(function () {
     <ul>
       <li>
         <a href="#start">start</a>
-        <a href="#theorie">wprowadzenie</a>
-        <a href="#properties">właściwości</a>
-        <a href="#usage">zastosowania</a>
-        <a href="#exercises">zadania</a>
+        <a href="#introduction">wprowadzenie</a>
+        <a href="#usage">zadania</a>
+        <a href="#exercises">własności</a>
         <a href="#about">o stronie</a>
       </li>
     </ul>
@@ -44,18 +43,18 @@ $(document).ready(function () {
 <div id="main-content">
     <section id="start">
         <center><img src="logo.png" height=90% width=100%></center>
-        <center><a class="raise" href="#theorie"><img src="button.png" height=8% width=8%></a></center>
+        <center><a class="raise" href="#introduction"><img src="button.png" height=8% width=8%></a></center>
         <img src="nav.png" width=100% class="center">
     </section>
 
 
-    <section id="theorie">
-        <img src="section.png" height=500px width=100% class="center">
+    <section id="introduction">
+        <img src="intro.png" height=300px width=100% class="center">
         <div class="sectionText">
             <h1>Czym są liczby Catalana?</h1>
-            <p>To szczególny ciąg liczbowy nazwany na cześć pochodzącego z Belgii matematyka Eugène Charlesa Catalana. </p>
-            <p>Natomiast po raz pierwszy wprowadzone zostały w XVIII wieku przez Leonarda Eulera na potrzeby badania liczby podziałów wielokątów na trójkąty.</p>
-            <p>Nazywa się je również liczbami Segnera na cześć matematyka Jána Andreja Segnera.</p>
+            <p>To szczególny ciąg liczbowy nazwany na cześć pochodzącego z Belgii matematyka Eugène Charlesa Catalana, który rozważał je jako liczbę sposobów rozmieszczenia nawiasów. </p>
+            <p>Natomiast po raz pierwszy wprowadzone zostały w XVIII wieku przez <span style="color: #C38D9E;">Leonarda Eulera</span> na potrzeby badania liczby podziałów wielokątów na trójkąty.</p>
+            <p>Nazywa się je również <span style="color: #C38D9E;">liczbami Segnera</span> na cześć matematyka Jána Andreja Segnera.</p>
 
             <h1>Jak wyznaczyć kolejne liczby Catalana?</h1>
             <h3>Sposób 1: wzór jawny</h3>
@@ -89,17 +88,9 @@ $(document).ready(function () {
         </p>
             <h2>Kolejne liczby Catalana dla n ≥ 0</h2>
             <p>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, ...</p>
-            $${\displaystyle c_{0} = 1\qquad }$$
-            $${\displaystyle c_{1} = 1\qquad }$$
-            $${\displaystyle c_{2} = 2\qquad }$$
-            $${\displaystyle c_{3} = 5\qquad }$$
 
-
-
-            <p>Co ciekawe, liczby te można znaleźć po podzieleniu środkowych liczb w trójkącie Pascala przez kolejne liczby całkowite dodatnie </p>
+            <p>Co ciekawe, liczby te można otrzymać po podzieleniu środkowych liczb w <span style="color: #C38D9E;">trójkącie Pascala</span> przez kolejne liczby całkowite dodatnie </p>
             <img src="pascal.png" height=350px width=650px class="center">
-            <p>* zakładając, że pierwszy wyraz ciągu to c0, czyli dla n=0, wówczas kolejne liczby Catalana to 1, 1, 2, 5, 14 itd.</p>
-
             <h2 style="margin-bottom: 1%">Program wyznaczajacy n-tą liczbę Catalana</h2>
             <table>
                 <tr>
@@ -113,59 +104,80 @@ $(document).ready(function () {
         </div>
   </section>
 
-  <section id="properties">
-      <img src="section.png" height=500px width=100% class="center">
-      <div class="sectionText">
-          <h1>właściwości</h1>
-          <p>zmniejszyć wysokosc nagłówkowych obrazkow; beda bardziej takimi paskami</p>
-
-      </div>
-  </section>
-
   <section id="usage">
-      <img src="section.png" height=500px width=100% class="center">
+      <img src="usage.png" height=300px width=100% class="center">
       <div class="sectionText">
-          <h1>zastosowania</h1>
-          <p>tutaj te rozne zadania itd</p>
-          <h3>Dowód wzoru jawnego poniewaz mozna go wyprowadzic na podstawie zadania z drogami</h3>
-          <p>TUTAJ http://liczbycatalana.blogspot.com</p>
+          <h1>Zadania</h1>
+          <p>Liczby Catalana znajdują zastosowanie w wielu ciekawych problemach z zakresu kombinatoryki. Za sprawą m.in. tego poświęcone jest im najwięcej tekstu w <span style="color: #E8A87C;">Encyklopedii Ciągów Liczb Całkowitych w Wersji On-Line (OEIS)</span>.</p>
+
+          <h3>I. Liczba podziałów na trójkąty</h3>
+          <p>Dany jest wielokąt wypukły o n+2 krawędziach. Liczba sposobów, na które można go podzielić przy użyciu przekątnych na różne trójkąty jest n-tą liczbą Catalana.</p>
+          <h4><span style="color: #E8A87C;">Przykład</h4></span>
+          <p>Oblicz, na ile sposobów można podzielić ośmiokąt foremny na różne trójkąty za pomocą przekątnych.</p>
+          <p>Ośmiokąt foremny ma 8 krawędzi, zatem w tym przypadku n=6. Należy zatem obliczyć szóstą liczbę Catalana.</p>
+          $${\displaystyle c_{6}={\frac {1}{6+1}}{2 \cdot 6 \choose 6}= 132\qquad }$$
+          <p><span style="color: #E8A87C;">Odpowiedź:</span> Istnieją 132 sposoby podziału ośmiokąta foremnego na różne trójkąty za pomocą jego przekątnych.</p>
+
+          <h3>II. Liczba dróg</h3>
+          <p>Rozważamy wszystkie możliwe łamane, które rozpoczynają się w początku kartezjańskiego układu współrzędnych (0, 0) a kończą się w punkcie (0, 2n) dla n ∈ <span style="font-size: 120%">ℕ</span>. Łamane złożone są z pojedynczych odcinków o początku (x, y) i końcu w punkcie (x+1, y+1) lub (x-1, y+1), gdzie x, y ∈ <span style="font-size: 120%">ℕ</span>.</p>
+          <p>Wówczas liczba tych łamanych, czyli możliwych dróg z (0, 0) do (0, 2n) jest równa n-tej liczbie Catalana.</p>
+          <p>GRAFIKA!</p>
+
+          <h3>III. Liczba monotonicznych dróg</h3>
+          <p>GRAFIKA!</p>
+
+          <h3>IV. Liczba drzew binarnych</h3>
+          <p>Liczba n-wierzchołkowych ukorzenionych drzew binarnych dla n ∈ <span style="font-size: 120%">ℕ</span> jest równa n-tej liczbie Catalana.</p>
+          <p>GRAFIKA! drzewko binarne</p>
+
+          <h3>V. Liczba rozmieszczeń nawiasów</h3>
+          <p>Liczba sposobów rozmieszczenia nawiasów w n-argumentowym działaniu jest równa C<sub>n-1</sub>.</p>
+
+
       </div>
   </section>
 
   <section id="exercises">
         <img src="section.png" height=500px width=100% class="center">
         <div class="sectionText">
-          <h1>zadania</h1>
+          <h1>wlasnosci??</h1>
+          <p></p>
+          <h3>Dowód wzoru jawnego poniewaz mozna go wyprowadzic na podstawie zadania z drogami i wlasnosci</h3>
+          <p>TUTAJ http://liczbycatalana.blogspot.com</p>
       </div>
   </section>
 
   <section id="about">
       <img src="section.png" height=500px width=100% class="center">
       <div class="sectionText">
-          <h1>o stronie</h1>
+          <h1>O stronie</h1>
           <p>opis</p>
           <h3>Użyte oprogramowanie</h3>
           <ul>
               <li>HTML</li>
               <li>CSS</li>
               <li>Javascript</li>
+              <li>jQuery</li>
               <li>MathJax</li>
               <li>Canva</li>
+              <li>GIMP</li>
           </ul>
-          <h3>Bibliografia</h3>
+          <h3>Źródła pomocne przy tworzeniu treści strony</h3>
             <ul>
-                <li>http://liczbycatalana.blogspot.com</li>
-                <li>https://mathworld.wolfram.com/CatalanNumber.html</li>
-                    <!--metoda na scrollowanie str zainspirowana z https://www.turnwall.com/articles/adding-single-page-scrolling-navigation-to-your-site/ -->
-                    //span kolory jakies wyroznione slowa?
-                <li></li>
+                <li><a href="https://mathworld.wolfram.com/CatalanNumber.html">https://mathworld.wolfram.com/CatalanNumber.html</a></li>
+                <li><a href="https://oeis.org/A000108">https://oeis.org/A000108</a></li>
+                <li><a href="http://liczbycatalana.blogspot.com">http://liczbycatalana.blogspot.com</a></li>
+                <li><a href="https://math.dartmouth.edu/~m68f19/MATH68-F19-lec3-Catalan_numbers.pdf">https://math.dartmouth.edu/~m68f19/MATH68-F19-lec3-Catalan_numbers.pdf</a></li>
+                <li><a href="http://student.krk.pl/024-Dudek-Krakow/other/catalana.html">http://student.krk.pl/024-Dudek-Krakow/other/catalana.html</a></li>
+                <li><a href="https://klein.mit.edu/~rstan/ec/catadd.pdf">Stanley, R.P – dodatek do książki <i>Enumerative Combinatorics</i>, poświęcony liczbom Catalana</a></li>
             </ul>
         </div>
   </section>
 
 <section id="footer">
     <div id="footer">
-        <p>Autor: Kinga Żmuda | Czcionka na darmowej licencji firmy <a href="http://fonts.googleapis.com/css?family=Roboto">Google</a></p>
+        <p>Autor: Kinga Żmuda | Czcionka na darmowej licencji firmy <a style="color: #D69A8C;
+        text-decoration: none;" href="http://fonts.googleapis.com/css?family=Roboto">Google</a></p>
     </div>
 </section>
 </div>

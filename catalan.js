@@ -2,7 +2,7 @@ function catalanNumber(index)
 {
     //catalan number obliczanie wlasxiwe
 
-    if(index === 1)
+    if(index === 0)
     {
         return 1;
     }
@@ -21,7 +21,7 @@ function catalan()
   n = parseFloat(n);
 
   if(n < 0 || Number.isInteger(n)===false)
-    document.getElementById("result").innerHTML = "niepoprawne n. podaj liczbę całkowitą większą od 0";
+    document.getElementById("result").innerHTML = "Niepoprawna wartość n. Podaj liczbę całkowitą nieujemną.";
 
   else
     {
