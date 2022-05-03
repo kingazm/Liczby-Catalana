@@ -17,6 +17,16 @@ body {
 
 }
 
+
+#start img {
+    margin: 0;
+}
+
+a img:hover {
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px)
+}
+
 .top-bar {
     position: -webkit-sticky;
     position: sticky;
@@ -106,11 +116,6 @@ h1 {
 }
 
 #footer a {
-    color: lime;
-}
-
-
-#footer a {
     color: #D69A8C;
     text-decoration: none;
 }
@@ -118,6 +123,7 @@ h1 {
 td {
     display: inline-block;
 }
+
 
 
 input[type=text] {
@@ -157,4 +163,8 @@ ul li:before {
     content: "\25AA";
     color: #C38D9E;
     padding: 6px;
+}
+
+.navigation ul li:before {
+    content: none;
 }
