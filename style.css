@@ -13,8 +13,6 @@ body {
   margin-left: 0;
   margin-right: 0;
   height: 100%;
-  /*text-height: 0.4;*/
-
 }
 
 
@@ -23,8 +21,8 @@ body {
 }
 
 a img:hover {
-    -webkit-transform: translate(0, -10px);
-    transform: translate(0, -10px)
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px)
 }
 
 .top-bar {

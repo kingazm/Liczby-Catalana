@@ -8,6 +8,21 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="catalan.js"></script>
 <script src="scrollMechanism"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+    // Handler for .ready() called.
+    $('html, body').animate({
+        scrollTop: $('#start').offset().top
+    });
+});
+
+</script>
+
+
+
 </HEAD>
 <BODY>
 
@@ -16,7 +31,7 @@
     <ul>
       <li>
         <a href="#start">start</a>
-        <a href="#theorie">teoria</a>
+        <a href="#theorie">wprowadzenie</a>
         <a href="#properties">właściwości</a>
         <a href="#usage">zastosowania</a>
         <a href="#exercises">zadania</a>
@@ -28,12 +43,12 @@
 
 <div id="main-content">
     <section id="start">
-        <center><img src="logo.png" height=80% width=100%></center>
+        <center><img src="logo.png" height=90% width=100%></center>
         <center><a class="raise" href="#theorie"><img src="button.png" height=8% width=8%></a></center>
         <img src="nav.png" width=100% class="center">
     </section>
 
-    
+
     <section id="theorie">
         <img src="section.png" height=500px width=100% class="center">
         <div class="sectionText">
@@ -156,12 +171,6 @@
 </div>
 
 
-
-<script>
-
-
-
-</sctipt>
 
 
 
