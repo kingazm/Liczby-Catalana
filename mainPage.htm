@@ -57,11 +57,11 @@ $(document).ready(function () {
             <p>Nazywa się je również <span style="color: #C38D9E;">liczbami Segnera</span> na cześć matematyka Jána Andreja Segnera.</p>
 
             <h1>Jak wyznaczyć kolejne liczby Catalana?</h1>
-            <h3>Sposób 1: wzór jawny</h3>
+            <h3>Sposób 1:<span style="color: #C38D9E;"> wzór jawny</span></h3>
             <p>Tak jak w przypadku innych ciągów, n-tą liczbę Catalana można wyznaczyć jako n-ty wyraz ciągu określonego wzorem jawnym</p>
             $${\displaystyle c_{n}={\frac {1}{n+1}}{2n \choose n}={\frac {(2n)!}{(n+1)!\,n!}}\qquad {\mbox{ dla }}n\geqslant 0}$$
 
-            <h3>Sposób 2: wzór rekurencyjny</h3>
+            <h3>Sposób 2: <span style="color: #C38D9E;">wzór rekurencyjny</span></h3>
             <p>Znając wzór jawny, wzór rekurencyjny można prosto wyprowadzić w poniższy sposób
 
             $${\large\displaystyle \frac{c_{n+1}}{c_{n}}={\frac {\frac{(2(n+1))!}{(n+1+1)!(n+1)!}}{\frac{(2n)!}{(n+1)!n!}}}\qquad }$$
@@ -86,10 +86,10 @@ $(document).ready(function () {
 
 
         </p>
-            <h2>Kolejne liczby Catalana dla n ≥ 0</h2>
-            <p>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, ...</p>
+            <h2>Kolejne liczby Catalana</h2>
+            <p>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, ... ></p>
 
-            <p>Co ciekawe, liczby te można otrzymać po podzieleniu środkowych liczb w <span style="color: #C38D9E;">trójkącie Pascala</span> przez kolejne liczby całkowite dodatnie </p>
+            <p>Co ciekawe, liczby te można otrzymać po podzieleniu środkowych liczb w <span style="color: #C38D9E;">trójkącie Pascala</span> przez kolejne liczby całkowite dodatnie. </p>
             <img src="pascal.png" height=350px width=650px class="center">
             <h2 style="margin-bottom: 1%">Program wyznaczajacy n-tą liczbę Catalana</h2>
             <table>
@@ -110,21 +110,52 @@ $(document).ready(function () {
           <h1>Zadania</h1>
           <p>Liczby Catalana znajdują zastosowanie w wielu ciekawych problemach z zakresu kombinatoryki. Za sprawą m.in. tego poświęcone jest im najwięcej tekstu w <span style="color: #E8A87C;">Encyklopedii Ciągów Liczb Całkowitych w Wersji On-Line (OEIS)</span>.</p>
 
-          <h3>I. Liczba podziałów na trójkąty</h3>
-          <p>Dany jest wielokąt wypukły o n+2 krawędziach. Liczba sposobów, na które można go podzielić przy użyciu przekątnych na różne trójkąty jest n-tą liczbą Catalana.</p>
+          <h3>I. Liczba monotonicznych dróg</h3>
+          <p>Dany jest kwadrat o boku n. Ilość wszystkich monotonicznych dróg z lewego dolnego wierzchołka do prawego górnego wierzchołka, przy założeniu, że nie możemy przekroczyć przekątnej, która łączy te wierzchołki, jest n-tą liczbą Catalana.</p>
+          <h4><span style="color: #E8A87C;">Sprawdźmy tę prawidłowość</h4>
+
+          <p>Kwadrat o boku n = 5 umieszczamy w układzie współrzędnych. Początek drogi jest w punkcie A(0, 0), a koniec w punkcie C(5, 5). Dozwolone są jedynie ruchy o jedną kratkę do góry lub o jedną kratkę w prawo. Dodatkowo, niedozwolone jest przekraczanie przekątej AC.</p>
+          <p>Dozwolone są tylko ruchy do góry, czyli (x, y) -> (x, y+1) lub w prawo, czyli (x, y) -> (x+1, y). Natomiast niedozwolona jest sytuacja, w której y>x. Ruch do góry możemy oznaczyć jako U, ruch w prawo jako R.</p>
+          <img src="exercise1-0.png" height=500px width=850px class="center">
+
+          <p>Zauważmy, że drogi składają się z 5 ruchów do góry i 5 ruchów w prawo. Ponadto, droga na drugim obrazku stała się niepoprawna w czwartym ruchu, kiedy liczba ruchów w górę przekroczyła liczbę dotychczasowych ruchów w prawo.</p>
+          <img src="exercise1-1.png" height=400px width=700px class="center">
+
+          <p>Analizujemy inny przykład niepoprawnej drogi. Trzeci ruch jest tym, w którym wszystko poszło nie tak, jak powinno. Ruchy możemy zapisać jako RUURRURRUU. Po trzecim ruchu zamieniamy kierunku wszystkich następnych ruchów, początek zostawiamy bez zmian. Otrzymujemy RUUUURUURR, co ilustruje rysunek poniżej. Wówczas w nowej drodze mamy 4xR i 6xU oraz co ciekawe, trafiamy do punktu (4, 6) na układzie współrzędnych. </p>
+          <img src="exercise1-2.png" height=400px width=700px class="center">
+          <p>Dla potwierdzenia te same kroki powtarzamy dla kolejnego przykładu niepoprawnej drogi.</p>
+          <img src="exercise1-3.png" height=400px width=700px class="center">
+          <p>To nam mówi, że punkt, w którym schodzimy na niepoprawną drogę, ma miejsce gdy pojawia się więcej ruchów do góry niż ruchów w prawo dotychczas. Bez znaczenia, w którym miejscu przekroczymy przekątną, w końcowym opisie drogi już po odwróceniu dalszej części jest o 2 więcej ruchów do góry niż w prawo.</p>
+
+          <p>Podsumowując, wszystkie możliwe sposoby przejścia z punktu A do punktu C wymagają 10 ruchów, wybieramy z nich 5 ruchów do góry. Natomiast w każdej niepoprawnej ścieżce, z 10 ruchów wybieramy 6 ruchów do góry. Odejmując od wszystkich możliwych dróg ilość niepoprawnych dróg, otrzymujemy ilosć wszystkich poprawnych dróg.</p>
+          $${\displaystyle {10 \choose 5} - {10 \choose 6} = 42 \qquad}$$
+
+          <p>Inaczej, wszystkie możliwe sposoby przejścia z punktu A do punktu C wymagają 10 ruchów, wybieramy z nich 5 ruchów w prawo. Natomiast w każdej niepoprawnej ścieżce, z 10 ruchów wybieramy 4 ruchy w prawo. </p>
+          $${\displaystyle {10 \choose 5} - {10 \choose 4} = 42 \qquad}$$
+
+          <p>To prowadzi nas do wzoru na liczby Catalana</p>
+          $${\displaystyle C_{n}={2n \choose n} \cdot {2n \choose n+1}={2n \choose n} \cdot {2n \choose n-1} = {\frac {(2n)!}{(n+1)!\,n!}} = {\frac {1}{n+1}}{2n \choose n}\qquad  }$$
+
+          <h4><span style="color: #E8A87C;">Przykład</h4></span>
+          <p>Oblicz, ile jest możliwych dróg z wierzchołka A do wierzchołka C bez przekraczania łączącej je przekątnej w kwadracie o boku n = 3.</p>
+          <p>Obliczamy zgodnie z wyprowadzonym wzorem C<sub>3</sub></p>
+          $${\displaystyle C_{3} = {\frac {1}{3+1}} {2 \cdot 3 \choose 3} = 5 \qquad}$$
+          <p>Możemy również zweryfikować obliczenia rysując wszystkie możliwe drogi</p>
+          <p>grafiki!1!</p>
+
+          <h3>II. Liczba podziałów na trójkąty</h3>
+          <p>Dany jest wielokąt wypukły o n + 2 krawędziach. Liczba sposobów, na które można go podzielić przy użyciu przekątnych na różne trójkąty jest n-tą liczbą Catalana.</p>
           <h4><span style="color: #E8A87C;">Przykład</h4></span>
           <p>Oblicz, na ile sposobów można podzielić ośmiokąt foremny na różne trójkąty za pomocą przekątnych.</p>
-          <p>Ośmiokąt foremny ma 8 krawędzi, zatem w tym przypadku n=6. Należy zatem obliczyć szóstą liczbę Catalana.</p>
+          <p>Ośmiokąt foremny ma 8 krawędzi, zatem w tym przypadku n = 6. Należy zatem obliczyć szóstą liczbę Catalana.</p>
           $${\displaystyle c_{6}={\frac {1}{6+1}}{2 \cdot 6 \choose 6}= 132\qquad }$$
           <p><span style="color: #E8A87C;">Odpowiedź:</span> Istnieją 132 sposoby podziału ośmiokąta foremnego na różne trójkąty za pomocą jego przekątnych.</p>
 
-          <h3>II. Liczba dróg</h3>
+          <h3>III. Liczba dróg</h3>
           <p>Rozważamy wszystkie możliwe łamane, które rozpoczynają się w początku kartezjańskiego układu współrzędnych (0, 0) a kończą się w punkcie (0, 2n) dla n ∈ <span style="font-size: 120%">ℕ</span>. Łamane złożone są z pojedynczych odcinków o początku (x, y) i końcu w punkcie (x+1, y+1) lub (x-1, y+1), gdzie x, y ∈ <span style="font-size: 120%">ℕ</span>.</p>
           <p>Wówczas liczba tych łamanych, czyli możliwych dróg z (0, 0) do (0, 2n) jest równa n-tej liczbie Catalana.</p>
           <p>GRAFIKA!</p>
 
-          <h3>III. Liczba monotonicznych dróg</h3>
-          <p>GRAFIKA!</p>
 
           <h3>IV. Liczba drzew binarnych</h3>
           <p>Liczba n-wierzchołkowych ukorzenionych drzew binarnych dla n ∈ <span style="font-size: 120%">ℕ</span> jest równa n-tej liczbie Catalana.</p>
@@ -168,9 +199,13 @@ $(document).ready(function () {
                 <li><a href="https://oeis.org/A000108">https://oeis.org/A000108</a></li>
                 <li><a href="http://liczbycatalana.blogspot.com">http://liczbycatalana.blogspot.com</a></li>
                 <li><a href="https://math.dartmouth.edu/~m68f19/MATH68-F19-lec3-Catalan_numbers.pdf">https://math.dartmouth.edu/~m68f19/MATH68-F19-lec3-Catalan_numbers.pdf</a></li>
+                <li><a href="https://www.youtube.com/watch?v=i5V21WCHTVo">https://www.youtube.com/watch?v=i5V21WCHTVo</a></li>
                 <li><a href="http://student.krk.pl/024-Dudek-Krakow/other/catalana.html">http://student.krk.pl/024-Dudek-Krakow/other/catalana.html</a></li>
                 <li><a href="https://klein.mit.edu/~rstan/ec/catadd.pdf">Stanley, R.P – dodatek do książki <i>Enumerative Combinatorics</i>, poświęcony liczbom Catalana</a></li>
             </ul>
+
+            <h3>Obrazy</h3>
+            <p>Wszystkie grafiki umieszczone na stronie zostały wykonane przeze mnie.</p>
         </div>
   </section>
 

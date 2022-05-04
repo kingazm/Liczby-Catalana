@@ -1,6 +1,5 @@
 function catalanNumber(index)
 {
-    //catalan number obliczanie wlasxiwe
 
     if(index === 0)
     {
