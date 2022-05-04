@@ -149,6 +149,7 @@ input[type=submit] {
     height: 33px;
     margin-bottom: 10px;
     font-size: 13px;
+    color: #C38D9E;
 }
 
 input[type=submit]:hover {
@@ -175,4 +176,16 @@ ul li:before {
 #about a{
     text-decoration: none;
     color: black;
+}
+
+#exercisesForYou input[type=submit] {
+    background-color: white;
+    border: 1.5px solid #D69A8C;
+    color: #D69A8C;
+}
+
+#exercisesForYou input[type=submit]:hover {
+    color: white;
+    background-color: #D69A8C;;
+
 }
