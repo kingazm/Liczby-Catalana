@@ -115,7 +115,7 @@ $(document).ready(function () {
           <h4><span style="color: #E8A87C;">Sprawdźmy tę prawidłowość!</h4>
 
           <p>Kwadrat ABCD o boku n = 5 umieszczamy w układzie współrzędnych. Początek drogi jest w punkcie A(0, 0), a koniec w punkcie C(5, 5). Dozwolone są jedynie ruchy o jedną kratkę do góry lub o jedną kratkę w prawo. Dodatkowo, niedozwolone jest przekraczanie przekątej AC.</p>
-          <p>Dozwolone są tylko ruchy do góry, czyli <span style="color: #E8A87C;">(x, y) → (x, y+1)</span> lub w prawo, czyli <span style="color: #E8A87C;">(x, y) → (x+1, y)</span>. Natomiast niedozwolone jest przekroczenie przekąten <span style="color: #E8A87C;">y = x</span>, czyli jest sytuacja, w której <span style="color: #E8A87C;">y > x</span>. Ruch do góry możemy oznaczyć jako <span style="color: #E8A87C;">U</span>, ruch w prawo jako <span style="color: #E8A87C;">R</span>.</p>
+          <p>Dozwolone są tylko ruchy do góry, czyli <span style="color: #E8A87C;">(x, y) → (x, y+1)</span> lub w prawo, czyli <span style="color: #E8A87C;">(x, y) → (x+1, y)</span>. Natomiast niedozwolone jest przekroczenie przekątnej <span style="color: #E8A87C;">y = x</span>, czyli jest sytuacja, w której <span style="color: #E8A87C;">y > x</span>. Ruch do góry możemy oznaczyć jako <span style="color: #E8A87C;">U</span>, ruch w prawo jako <span style="color: #E8A87C;">R</span>.</p>
           <img src="exercise1-0.png" height=300px width=850px class="center">
 
           <p>Zauważmy, że drogi z A do C składają się zawsze z 5 ruchów do góry i 5 ruchów w prawo. Ponadto, droga na drugim obrazku stała się niepoprawna w czwartym ruchu, kiedy liczba ruchów w górę przekroczyła liczbę dotychczasowych ruchów w prawo.</p>
@@ -134,7 +134,7 @@ $(document).ready(function () {
           $${\displaystyle {10 \choose 5} - {10 \choose 4} = 42 \qquad}$$
 
           <p>To prowadzi nas do wzoru na liczby Catalana</p>
-          $${\displaystyle c_{n}={2n \choose n} \cdot {2n \choose n+1}={2n \choose n} \cdot {2n \choose n-1} = {\frac {(2n)!}{(n+1)!\,n!}} = {\frac {1}{n+1}}{2n \choose n}\qquad  }$$
+          $${\displaystyle c_{n}={2n \choose n} - {2n \choose n+1}={2n \choose n} - {2n \choose n-1} = {\frac {(2n)!}{(n+1)!\,n!}} = {\frac {1}{n+1}}{2n \choose n}\qquad  }$$
 
           <p><span style="color: #E8A87C;">Odpowiedź: </span>W kwadracie o boku długości 5, istnieją 42 możliwe drogi z dolnego lewego wierzchołka do prawego górnego wierzchołka bez przekraczania przekątnej, która je łączy.</p>
 
