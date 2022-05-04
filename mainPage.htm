@@ -112,29 +112,29 @@ $(document).ready(function () {
 
           <h3>I. Liczba monotonicznych dróg</h3>
           <p>Dany jest kwadrat o boku n. Ilość wszystkich monotonicznych dróg z lewego dolnego wierzchołka do prawego górnego wierzchołka, przy założeniu, że nie możemy przekroczyć przekątnej, która łączy te wierzchołki, jest n-tą liczbą Catalana.</p>
-          <h4><span style="color: #E8A87C;">Sprawdźmy tę prawidłowość</h4>
+          <h4><span style="color: #E8A87C;">Sprawdźmy tę prawidłowość!</h4>
 
-          <p>Kwadrat o boku n = 5 umieszczamy w układzie współrzędnych. Początek drogi jest w punkcie A(0, 0), a koniec w punkcie C(5, 5). Dozwolone są jedynie ruchy o jedną kratkę do góry lub o jedną kratkę w prawo. Dodatkowo, niedozwolone jest przekraczanie przekątej AC.</p>
-          <p>Dozwolone są tylko ruchy do góry, czyli (x, y) -> (x, y+1) lub w prawo, czyli (x, y) -> (x+1, y). Natomiast niedozwolona jest sytuacja, w której y>x. Ruch do góry możemy oznaczyć jako U, ruch w prawo jako R.</p>
-          <img src="exercise1-0.png" height=500px width=850px class="center">
+          <p>Kwadrat ABCD o boku n = 5 umieszczamy w układzie współrzędnych. Początek drogi jest w punkcie A(0, 0), a koniec w punkcie C(5, 5). Dozwolone są jedynie ruchy o jedną kratkę do góry lub o jedną kratkę w prawo. Dodatkowo, niedozwolone jest przekraczanie przekątej AC.</p>
+          <p>Dozwolone są tylko ruchy do góry, czyli <span style="color: #E8A87C;">(x, y) → (x, y+1)</span> lub w prawo, czyli <span style="color: #E8A87C;">(x, y) → (x+1, y)</span>. Natomiast niedozwolone jest przekroczenie przekąten <span style="color: #E8A87C;">y = x</span>, czyli jest sytuacja, w której <span style="color: #E8A87C;">y > x</span>. Ruch do góry możemy oznaczyć jako <span style="color: #E8A87C;">U</span>, ruch w prawo jako <span style="color: #E8A87C;">R</span>.</p>
+          <img src="exercise1-0.png" height=300px width=850px class="center">
 
-          <p>Zauważmy, że drogi składają się z 5 ruchów do góry i 5 ruchów w prawo. Ponadto, droga na drugim obrazku stała się niepoprawna w czwartym ruchu, kiedy liczba ruchów w górę przekroczyła liczbę dotychczasowych ruchów w prawo.</p>
+          <p>Zauważmy, że drogi z A do C składają się zawsze z 5 ruchów do góry i 5 ruchów w prawo. Ponadto, droga na drugim obrazku stała się niepoprawna w czwartym ruchu, kiedy liczba ruchów w górę przekroczyła liczbę dotychczasowych ruchów w prawo.</p>
           <img src="exercise1-1.png" height=400px width=700px class="center">
 
-          <p>Analizujemy inny przykład niepoprawnej drogi. Trzeci ruch jest tym, w którym wszystko poszło nie tak, jak powinno. Ruchy możemy zapisać jako RUURRURRUU. Po trzecim ruchu zamieniamy kierunku wszystkich następnych ruchów, początek zostawiamy bez zmian. Otrzymujemy RUUUURUURR, co ilustruje rysunek poniżej. Wówczas w nowej drodze mamy 4xR i 6xU oraz co ciekawe, trafiamy do punktu (4, 6) na układzie współrzędnych. </p>
+          <p>Przeanalizujemy inny przykład niepoprawnej drogi na schemacie po lewej. Trzeci ruch jest niedozwolony. Po trzecim ruchu zamieniamy kierunku wszystkich następnych ruchów, początek zostawiamy bez zmian. Otrzymujemy schemat po prawej. Wówczas w nowej drodze mamy  <span style="color: #E8A87C;">4 ∙ R</span> i  <span style="color: #E8A87C;">6 ∙ U</span>oraz, co ciekawe, trafiamy do punktu  <span style="color: #E8A87C;">(4, 6)</span> na układzie współrzędnych. </p>
           <img src="exercise1-2.png" height=400px width=700px class="center">
-          <p>Dla potwierdzenia te same kroki powtarzamy dla kolejnego przykładu niepoprawnej drogi.</p>
+          <p>Dla potwierdzenia, że nie jest to przypadek, te same kroki powtarzamy dla kolejnego przykładu niepoprawnej drogi.</p>
           <img src="exercise1-3.png" height=400px width=700px class="center">
-          <p>To nam mówi, że punkt, w którym schodzimy na niepoprawną drogę, ma miejsce gdy pojawia się więcej ruchów do góry niż ruchów w prawo dotychczas. Bez znaczenia, w którym miejscu przekroczymy przekątną, w końcowym opisie drogi już po odwróceniu dalszej części jest o 2 więcej ruchów do góry niż w prawo.</p>
+          <p>To potwierdza, że punkt, w którym schodzimy na niepoprawną drogę, ma miejsce gdy pojawia się więcej ruchów do góry niż ruchów w prawo dotychczas. Bez znaczenia, w którym miejscu przekroczymy przekątną, w końcowym opisie drogi już po odwróceniu dalszej części jest o 2 więcej ruchów do góry niż w prawo.</p>
 
-          <p>Podsumowując, wszystkie możliwe sposoby przejścia z punktu A do punktu C wymagają 10 ruchów, wybieramy z nich 5 ruchów do góry. Natomiast w każdej niepoprawnej ścieżce, z 10 ruchów wybieramy 6 ruchów do góry. Odejmując od wszystkich możliwych dróg ilość niepoprawnych dróg, otrzymujemy ilosć wszystkich poprawnych dróg.</p>
+          <p>Podsumowując, wszystkie możliwe sposoby przejścia z punktu A do punktu C wymagają 10 ruchów, wybieramy z nich 5 ruchów do góry. Natomiast w każdej niepoprawnej ścieżce, z 10 ruchów wybieramy 6 ruchów do góry. Odejmując od wszystkich możliwych dróg ilość niepoprawnych dróg, otrzymujemy <span style="color: #E8A87C;">ilosć wszystkich poprawnych dróg.</span></p>
           $${\displaystyle {10 \choose 5} - {10 \choose 6} = 42 \qquad}$$
 
-          <p>Inaczej, wszystkie możliwe sposoby przejścia z punktu A do punktu C wymagają 10 ruchów, wybieramy z nich 5 ruchów w prawo. Natomiast w każdej niepoprawnej ścieżce, z 10 ruchów wybieramy 4 ruchy w prawo. </p>
+          <p>To samo otrzymamy skupiając się na ruchach w prawo. Wszystkie możliwe sposoby przejścia z punktu A do punktu C wymagają 10 ruchów, wybieramy z nich 5 ruchów w prawo. Natomiast w każdej niepoprawnej ścieżce, z 10 ruchów wybieramy 4 ruchy w prawo. </p>
           $${\displaystyle {10 \choose 5} - {10 \choose 4} = 42 \qquad}$$
 
           <p>To prowadzi nas do wzoru na liczby Catalana</p>
-          $${\displaystyle C_{n}={2n \choose n} \cdot {2n \choose n+1}={2n \choose n} \cdot {2n \choose n-1} = {\frac {(2n)!}{(n+1)!\,n!}} = {\frac {1}{n+1}}{2n \choose n}\qquad  }$$
+          $${\displaystyle c_{n}={2n \choose n} \cdot {2n \choose n+1}={2n \choose n} \cdot {2n \choose n-1} = {\frac {(2n)!}{(n+1)!\,n!}} = {\frac {1}{n+1}}{2n \choose n}\qquad  }$$
 
           <p><span style="color: #E8A87C;">Odpowiedź: </span>W kwadracie o boku długości 5, istnieją 42 możliwe drogi z dolnego lewego wierzchołka do prawego górnego wierzchołka bez przekraczania przekątnej, która je łączy.</p>
 
@@ -142,7 +142,7 @@ $(document).ready(function () {
           <h4><span style="color: #E8A87C;">Przykład</h4></span>
           <p>Oblicz, ile jest możliwych dróg z wierzchołka A do wierzchołka C bez przekraczania łączącej je przekątnej w kwadracie o boku n = 3.</p>
           <p>Zgodnie z wyprowadzonym wzorem obliczamy C<sub>3</sub></p>
-          $${\displaystyle C_{3} = {\frac {1}{3+1}} {2 \cdot 3 \choose 3} = 5 \qquad}$$
+          $${\displaystyle c_{3} = {\frac {1}{3+1}} {2 \cdot 3 \choose 3} = 5 \qquad}$$
           <p>Możemy również zweryfikować obliczenia rysując wszystkie możliwe drogi</p>
           <img src="exercise1-4.png" height=400px width=700px class="center">
 
