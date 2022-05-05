@@ -145,6 +145,7 @@
 
           <p>To prowadzi nas do wzoru na liczby Catalana</p>
           $${\displaystyle c_{n}={2n \choose n} - {2n \choose n+1}={2n \choose n} - {2n \choose n-1} = {\frac {(2n)!}{(n+1)!\,n!}} = {\frac {1}{n+1}}{2n \choose n}\qquad  }$$
+          <p>Z pierwszej zależności przy okazji widać, że liczby Catalana są liczbami naturalnymi.</p>
 
           <p><span style="color: #E8A87C;">Odpowiedź: </span>W kwadracie o boku długości 5, istnieją 42 możliwe drogi z dolnego lewego wierzchołka do prawego górnego wierzchołka bez przekraczania przekątnej, która je łączy.</p>
 
@@ -182,9 +183,15 @@
           <p>GRAFIKA! drzewko binarne</p>
 
           <h3>V. Liczba dróg</h3>
-          <p>Rozważamy wszystkie możliwe łamane, które rozpoczynają się w początku kartezjańskiego układu współrzędnych (0, 0) a kończą się w punkcie (0, 2n) dla n ∈ <span style="font-size: 120%">ℕ</span>. Łamane złożone są z pojedynczych odcinków o początku (x, y) i końcu w punkcie (x+1, y+1) lub (x-1, y+1), gdzie x, y ∈ <span style="font-size: 120%">ℕ</span>.</p>
-          <p>Wówczas liczba tych łamanych, czyli możliwych dróg z (0, 0) do (0, 2n) jest równa n-tej liczbie Catalana.</p>
-          <p>GRAFIKA!</p>
+          <p>Rozważamy wszystkie możliwe łamane, które rozpoczynają się w początku kartezjańskiego układu współrzędnych (0, 0) a kończą się w punkcie (0, 2n) dla n ∈ <span style="font-size: 120%">ℕ</span>. Łamane złożone są z pojedynczych odcinków o początku (x, y) i końcu w punkcie <span style="color: #E8A87C;">(x+1, y+1)</span< lub <span style="color: #E8A87C;">(x-1, y+1)</span>, gdzie x, y ∈ <span style="font-size: 120%">ℕ</span>.</p>
+          <p>Wówczas liczba tych łamanych, czyli możliwych dróg <span style="color: #E8A87C;"> z (0, 0) do (0, 2n)</span> jest równa n-tej liczbie Catalana.</p>
+          <h4><span style="color: #E8A87C;">Przykład</h4></span>
+          <p>Podaj liczbę możliwych dróg od początku układu współrzędnych do punktu (0, 4). Możesz poruszać się jedynie o jedną kratkę w górę i w prawo lub o jedną kratkę w górę i w lewo, nie przekraczając osi y = 0.</p>
+          <img src = "paths-1.png" height=100px width=300px class="center">
+          <img src = "paths.png" height=370px width=680px class="center">
+          <p><span style="color: #E8A87C;">Odpowiedź:</span> Są dwie takie drogi.
+
+
 
       </div>
   </section>
@@ -195,7 +202,7 @@
           <h1>Zadania dla Ciebie!</h1>
           <p>W tej części strony znajdują się zadania, które możesz rozwiązać samodzielnie w ramach sprawdzenia swojej wiedzy! <br>W razie problemów, kliknij przycisk <span style="color: #D69A8C;">wskazówka</span>, aby otrzymać podpowiedź.<br> Jeśli zadanie dalej sprawia Ci problem, nie wahaj się wrócić do zakładek <span style="color: #D69A8C;">wprowadzenie</span> i <span style="color: #D69A8C;">zastosowania</span>, aby ponownie prześledzić podobne przykłady.</p>
           <h4><span style="color: #D69A8C;">Zadanie 1</span></h4>
-          <p>Ile jest możliwych dróg z dolnego lewego do górnego prawego wierzchołka kwadratu o obwodzie 40 cm, przy zastrzeżeniu, że nie można przekroczyć przekątnej łączącej wymienione wierzchołki? Możesz poruszać się jedynie 1 cm w górę lub 1cm w prawo.</p>
+          <p>Ile jest możliwych dróg z dolnego lewego do górnego prawego wierzchołka kwadratu o obwodzie 40 cm, przy zastrzeżeniu, że nie można przekroczyć przekątnej łączącej wymienione wierzchołki? Możesz poruszać się jedynie 1 cm w górę lub 1 cm w prawo.</p>
           <table>
               <tr>
                   <td><input type="submit" value="pokaż odpowiedź" onclick="exercises(0)"></td>
@@ -247,6 +254,19 @@
               </tr>
               <tr>
                   <td><div id="answer3"></div></td>
+              </tr>
+          </table>
+
+          <h4><span style="color: #D69A8C;">Zadanie 5</span></h4>
+          <p>Oblicz, ile jest możliwych dróg z początku układu współrzędnych do punktu (0, a), z czego a jest równe c<sub>4</sub>. Możesz poruszać się jedynie o jedną kratkę w górę i w prawo lub o jedną kratkę w górę i w lewo, nie przekraczając osi y = 0. </p>
+          <table>
+              <tr>
+                  <td><input type="submit" value="pokaż odpowiedź" onclick="exercises(4)"></td>
+                  <td><input type="submit" value="wskazówka" onclick="help(4)"></td>
+                  <td><input type="submit" value="ukryj" onclick="hide(4)"></td>
+              </tr>
+              <tr>
+                  <td><div id="answer4"></div></td>
               </tr>
           </table>
 
