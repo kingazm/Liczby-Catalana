@@ -123,6 +123,7 @@ h1 {
   vertical-align: top;
 }
 
+
 td {
     display: inline-block;
 }
@@ -146,7 +147,7 @@ input[type=submit] {
     border: 1.5px solid #C38D9E;
     background-color: white;
     transition-duration: 0.4s;
-    height: 33px;
+    height: 32px;
     margin-bottom: 10px;
     font-size: 13px;
     color: #C38D9E;
