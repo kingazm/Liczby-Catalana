@@ -1,4 +1,4 @@
-var answers = ['16796', 'Dziewięciokąt', 'a = 3, b = 1 lub -1', 'Są na to 42 sposoby', 'Jest 429 takich dróg']
+var answers = ['16796', 'Jedenastokąt', 'a = 3, b = 1 lub -1', 'Są na to 42 sposoby', 'Jest 429 takich dróg']
 var clues = ['Obwód = 4 ∙ n', 'n + 2 = liczba boków figury', 'Zacznij od rozwiązania drugiego równania', 'Zauważ, z ilu argumentów składa się działanie', 'a = 2n']
 
 function exercises(number){
