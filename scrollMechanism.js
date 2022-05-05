@@ -1,13 +1,12 @@
 const sections = document.querySelectorAll("section[id]");
-window.addEventListener("scroll", navHighlighter);
+window.addEventListener("scroll", navShowing);
 
-function navHighlighter() {
+function navShowing() {
 
   let scrollY = window.pageYOffset;
 
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
-
     const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
     sectionId = current.getAttribute("id");
 
