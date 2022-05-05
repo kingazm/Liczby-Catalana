@@ -171,7 +171,18 @@
 
 
           <h3>III. Liczba rozmieszczeń nawiasów</h3>
-          <p>Liczba sposobów rozmieszczenia nawiasów w n-argumentowym działaniu jest równa C<sub>n-1</sub>.</p>
+          <p>Liczba sposobów rozmieszczenia nawiasów w n-argumentowym działaniu jest równa C<sub>n-1</sub>. Pewne działanie dwuagrumentowe działanie zapiszemy jako ✦. </p>
+          <h4><span style="color: #E8A87C;">Przykład</h4></span>
+          <p>Dla czterech argumentów a, b, c, d można otrzymać różnych rozmieszczeń nawiasów w działaniu:</p>
+          <ul>
+              <li> <span style="color: #E8A87C;">(</span>a ✦ b<span style="color: #E8A87C;">)</span> ✦ c ✦ d</li>
+              <li> a ✦ <span style="color: #E8A87C;">(</span>b ✦ c<span style="color: #E8A87C;">)</span> ✦ d</li>
+              <li> a ✦ b ✦ <span style="color: #E8A87C;">(</span>c ✦ d<span style="color: #E8A87C;">)</span></li>
+              <li> <span style="color: #E8A87C;">(</span>a ✦ b ✦ c<span style="color: #E8A87C;">)</span>✦ d</li>
+              <li> a ✦ <span style="color: #E8A87C;">(</span>b ✦ c ✦ d<span style="color: #E8A87C;">)</span></li>
+          </ul>
+          <p>c<sub>3</sub> = 5</p>
+          <p><span style="color: #E8A87C;">Odpowiedź:</span> W czteroargumentowym działaniu nawiasy można rozmieścić na 5 sposobów.</p>
 
           <h3>IV. Liczba drzew binarnych</h3>
           <p>Liczba n-wierzchołkowych ukorzenionych drzew binarnych dla n ∈ <span style="font-size: 120%">ℕ</span> jest równa n-tej liczbie Catalana.</p>
@@ -232,6 +243,20 @@
                   <td><div id="answer2"></div></td>
               </tr>
           </table>
+
+          <h4><span style="color: #D69A8C;">Zadanie 4</span></h4>
+          <p>Oblicz, na ile sposobów można rozmieścić nawiasy w działaniu zawierającym następujące argumenty: k, l, m, n, o, p.</p>
+          <table>
+              <tr>
+                  <td><input type="submit" value="pokaż odpowiedź" onclick="exercises(3)"></td>
+                  <td><input type="submit" value="wskazówka" onclick="help(3)"></td>
+                  <td><input type="submit" value="ukryj" onclick="hide(3)"></td>
+              </tr>
+              <tr>
+                  <td><div id="answer3"></div></td>
+              </tr>
+          </table>
+
       </div>
   </section>
 
@@ -239,8 +264,14 @@
   <section id="about">
       <img src="about.png" height=300px width=100% class="center">
       <div class="sectionText">
-          <h1>O stronie</h1>
-          <p>(...) W mojej pracy podjęłam taki a nie inny temat przede wszystkim ze względu na szerokie zastosowanie liczb Catalana w kombinatoryce oraz sam fakt, że to zagadnienie bardzo mnie zainteresowało, a nie jest zawarte w materiale omawianym w szkole. (...)</p>
+          <h1>O stronie i autorce</h1>
+          <p>Nazywam się Kinga Żmuda, jestem uczennicą klasy o profilu matematyczno-fizycznym w III LO im. Adama Mickiewicza w Katowicach, a tę stronę stworzyłam jako pracę na <span style="color: #C38D9E;">konkurs Zobaczyć Matematykę (edycja 2021/2022)</span> organizowany przez Akademię Górniczo-Hutniczą im. Stanisława Staszica w Krakowie. </p>
+          <p>W mojej pracy podjęłam taki a nie inny temat przede wszystkim ze względu na <span style="color: #C38D9E;">szerokie zastosowanie liczb Catalana w kombinatoryce</span> oraz sam fakt, że to zagadnienie bardzo mnie zainteresowało, a nie jest szeroko omawiane w szkole.</p>
+          <p> Za cel obrałam zebranie na niej informacji o sekwencji liczb Catalana nie tylko od <span style="color: #C38D9E;">strony czysto matematycznej</span> i <span style="color: #C38D9E;">praktycznej</span>, ale zadbałam też o umieszczenie informacji na temat ich <span style="color: #C38D9E;">historii</span>, z którą rzadko spotykałam się w pracach na ich temat w języku polskim. Ułożyłam również dedykowany treści strony zestaw zadań do przećwiczenia dla użytkownika wraz z możliwością sprawdzenia odpowiedzi, a także umieściłam prosty program do obliczania n-tej liczby Catalana. Bardzo istotnym aspektem mojej pracy było również uczynienie wyglądu strony nowoczesnym i miłym dla oka oraz przyjemnym i intuicyjnym w użytkowaniu. Dlatego wszystkie niewyróżnone w obrazach <span style="color: #C38D9E;">grafiki wykonałam specjalnie na potrzeby tej witryny</span>. </p>
+          <p>Research wykonany na potrzeby tego projektu przypomniał mi, jak niezwykle ciekawa potrafi być szerokopojęta matematyka, czego życzę również Tobie, Użytkowniku, Użytkowniczko. Tworzenie rozbudowanej strony, jej treści i oprawy graficznej z użyciem wielu narzędzi doceniam jako bardzo cenne doświadczenie na przyszłość zarówno w zakresie czysto technicznym, jak i choćby rozplanowywania własnej pracy.</p>
+
+          <p>Owocnej nauki!</p>
+
           <h3>Użyte technologie i oprogramowanie niekomercyjne</h3>
           <ul>
               <li>HTML</li>
@@ -258,9 +289,11 @@
                 <li><a href="https://math.dartmouth.edu/~m68f19/MATH68-F19-lec3-Catalan_numbers.pdf" target=”_blank”>https://math.dartmouth.edu/~m68f19/MATH68-F19-lec3-Catalan_numbers.pdf</a></li>
                 <li><a href="https://www.youtube.com/watch?v=i5V21WCHTVo" target=”_blank”>https://www.youtube.com/watch?v=i5V21WCHTVo</a></li>
                 <li><a href="http://student.krk.pl/024-Dudek-Krakow/other/catalana.html" target=”_blank”>http://student.krk.pl/024-Dudek-Krakow/other/catalana.html</a></li>
-                <li><a href="https://klein.mit.edu/~rstan/ec/catadd.pdf" target=”_blank”>Stanley, R.P – dodatek do książki <i>Enumerative Combinatorics</i>, poświęcony liczbom Catalana</a></li>
+                <li><a href="https://klein.mit.edu/~rstan/ec/catadd.pdf" target=”_blank”>Stanley, R.P – dodatek do książki <i>Enumerative Combinatorics</i>, poświęcony liczbom Catalana https://klein.mit.edu/~rstan/ec/catadd.pdf</a></li>
                 <li><a href="https://www.youtube.com/watch?v=rvXMDO12hlw" target=”_blank”>https://www.youtube.com/watch?v=rvXMDO12hlw</a></li>
                 <li><a href="https://math.mit.edu/~rstan/transparencies/china.pdf" target="_blank">https://math.mit.edu/~rstan/transparencies/china.pdf</a></li>
+                <li><a href="https://www.math.ucla.edu/~pak/papers/cathist4.pdf" target="_blank">Pak Igor, <i>History of Catalan numbers</i> https://www.math.ucla.edu/~pak/papers/cathist4.pdf</a></li>
+                <li><a href="https://epodreczniki.pl/pdf/PzOr8Xkyx" target="_blank">Cybulska Justyna, <i>Utytułowane liczby</i> https://epodreczniki.pl/pdf/PzOr8Xkyx</a></li>
             </ul>
 
             <h3>Wykorzystane obrazy</h3>

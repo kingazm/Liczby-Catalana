@@ -170,6 +170,12 @@ ul li:before {
     padding: 6px;
 }
 
+#usage ul li:before{
+    content: "\25AA";
+    color: #E8A87C;
+    padding: 6px;
+}
+
 .navigation ul li:before {
     content: none;
 }

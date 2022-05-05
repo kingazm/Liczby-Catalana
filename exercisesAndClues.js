@@ -1,5 +1,5 @@
-var answers = ['16796', 'Dziewięciokąt', 'a = 3, b = 1 lub -1']
-var clues = ['Obwód = 4 ∙ n', 'n + 2 = liczba boków figury', 'Zacznij od rozwiązania drugiego równania']
+var answers = ['16796', 'Dziewięciokąt', 'a = 3, b = 1 lub -1', 'Są na to 42 sposoby']
+var clues = ['Obwód = 4 ∙ n', 'n + 2 = liczba boków figury', 'Zacznij od rozwiązania drugiego równania', 'Zauważ, z ilu argumentów składa się działanie']
 
 function exercises(number){
     switch(number){
@@ -11,6 +11,9 @@ function exercises(number){
         break;
     case 2:
         document.getElementById("answer2").innerHTML = "Odpowiedź: " + answers[2];
+        break;
+    case 3:
+        document.getElementById("answer3").innerHTML = "Odpowiedź: " + answers[3];
         break;
 
     }
@@ -26,6 +29,9 @@ function help(number){
         break;
     case 2:
         document.getElementById("answer2").innerHTML = "Wskazówka: " + clues[2];
+        break;
+    case 3:
+        document.getElementById("answer3").innerHTML = "Wskazówka: " + clues[3];
         break;
 
     }
@@ -43,8 +49,9 @@ function hide(number){
     case 2:
         document.getElementById("answer2").innerHTML = " ";
         break;
-
-
+    case 3:
+        document.getElementById("answer3").innerHTML = " ";
+        break;
     }
 
 }
