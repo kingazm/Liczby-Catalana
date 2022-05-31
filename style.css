@@ -202,3 +202,9 @@ ul li:before {
     background-color: #D69A8C;;
 
 }
+
+@media only screen and (max-width: 600px) {
+body {
+position: relative;
+}
+}
