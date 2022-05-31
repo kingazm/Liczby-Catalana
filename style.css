@@ -195,3 +195,22 @@ ul li:before {
     background-color: #D69A8C;;
 
 }
+
+@media only screen and (max-width: 480px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 481px){
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
