@@ -184,6 +184,10 @@ ul li:before {
     color: black;
 }
 
+#about {
+    overflow-wrap: break-word;
+}
+
 #exercisesForYou input[type=submit] {
     background-color: white;
     border: 1.5px solid #D69A8C;
