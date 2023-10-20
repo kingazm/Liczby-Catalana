@@ -1,6 +1,6 @@
 # Liczby-Catalana - Catalan Numbers
 
-Second Prize winning website in AGH University of Science and Technology's website creating competition "Zobaczyć matematykę", for the best educational website build from scratch about mathematical field of choice.
+Second Prize winning website in AGH University of Science and Technology's nationwide website creating competition "Zobaczyć matematykę", for the best educational website build from scratch about mathematical field of choice (90+ participants yearly). <br>
 Each website is judged by a jury of academic professionals, based on it's design, tools used, their diffuculty level and justification, user-frieldlyness (target: reader of high school knowledge), and uniqueness of the topic.
 
 The Liczby Catalana (Catalan Numbers) website provides the information, historical facts and practical applications of a special number sequence called the Catalan Numbers.
